@@ -1,0 +1,60 @@
+*, *::after, *::before {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+} 
+body {
+ background-color: #eeeeee;
+ position: relative;
+}
+
+.scene {
+ margin: 40px auto;
+ position: relative;
+ width: 265px;
+ height: 265px;
+ perspective: 4000px;
+}
+
+.container {
+ display: flex;
+}
+
+
+.information {
+ flex-basis: 20%;
+ display: none;
+}
+
+.carousel {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ transform: translateZ(-360px);
+ transform-style: preserve-3d;
+ transition: transform 1s;
+ -webkit-transform: translateZ(-360px);
+ -moz-transform: translateZ(-360px);
+ -ms-transform: translateZ(-360px);
+ -o-transform: translateZ(-360px);
+ -webkit-transition: transform 1s;
+ -moz-transition: transform 1s;
+ -ms-transition: transform 1s;
+ -o-transition: transform 1s;
+}
+.carousel__cell {
+ position: absolute;
+ padding: 10px;
+ background-color: rgb(238, 238, 238);
+ box-shadow:  10px 10px 20px #c6c6c6,
+ -10px -10px 20px #e0e0e0;
+ left: 10px;
+ top: 10px;
+}
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(360px);}
+.carousel__cell:nth-child(2) { transform: rotateY( 60deg) translateZ(360px);}
+.carousel__cell:nth-child(3) { transform: rotateY( 120deg) translateZ(360px);}
+.carousel__cell:nth-child(4) { transform: rotateY(180deg) translateZ(360px);}
+.carousel__cell:nth-child(5) { transform: rotateY(240deg) translateZ(360px);}
+.carousel__cell:nth-child(6) { transform: rotateY(300deg) translateZ(360px);}
